@@ -38,6 +38,10 @@ select{
 }
 
 
+label{
+    font-weight: bold;
+}
+
 
 .top-container {
     display: flex;
