@@ -13,7 +13,7 @@ function ModalCards(props){
                 
                 {props.data.map(data => (
                     <div className="card-data" key={data.id}>
-                        <CardData onClose={data.closeHandler} key={data.length} fullname={data.fullname} dateOfBirth={data.dateOfBirth} company={data.company} phonenum={data.phonenum} role={data.role} profilepic={data.profilepic} file={data.file}/>
+                        <CardData onClose={data.closeHandler} key={data.length} fullname={data.fullname} dateOfBirth={data.dateOfBirth} company={data.company} phonenum={data.phonenum} role={data.role} file={data.file}/>
                     </div>
                     ))
                                 
@@ -21,7 +21,7 @@ function ModalCards(props){
                 
                   
                 
-              </div>
+            </div>
             
             
 

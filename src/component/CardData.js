@@ -6,7 +6,7 @@ import './ProfileCard.css';
 
 function CardData(props){
     return(
-        <div className = "card" key={props.key}>
+        <div className = "card">
             <div className='prevGroup'>
                 <div className="top-container"> <img src={props.file} className="profile-img" alt='foto'/>
                     <div className="ml-3">

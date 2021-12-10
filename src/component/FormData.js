@@ -9,18 +9,17 @@ function FormData(){
         dateOfBirth: "",
         company: "",
         phonenum: "",
-        role: "",
-        profilepic: "",
+        role: ""
     };
 
     const [file, setFile]= useState(image);
 
-    const [{ fullname, dateOfBirth, company, phonenum, role, profilepic}, setForm] = useState(form);
+    const [{ fullname, dateOfBirth, company, phonenum, role}, setForm] = useState(form);
 
     const [data, setData] = useState([])
 
 
-    
+
     const handleChange = e => {
         const { name, value } = e.target;
         setForm(prevState => ({ ...prevState, [name]: value }));
@@ -35,14 +34,13 @@ function FormData(){
 
     const submitHandler = e => {
         e.preventDefault();
-        setData([...data, { "id": data.length + 1, "fullname": fullname, "dateOfBirth": dateOfBirth, "company": company, "phonenum":phonenum, "role":role, "profilepic":profilepic, 'file':file }]);
+        setData([...data, { "id": data.length + 1, "fullname": fullname, "dateOfBirth": dateOfBirth, "company": company, "phonenum":phonenum, "role":role, 'file':file }]);
         setForm({
             fullname:"",
             dateOfBirth: "",
             company: "",
             phonenum: "",
-            role: "",
-            profilepic: "",
+            role: ""
         })
         setFile(image)
     }
@@ -55,8 +53,7 @@ function FormData(){
             dateOfBirth: "",
             company: "",
             phonenum: "",
-            role: "",
-            profilepic: "",
+            role: ""
         })
         setFile(image)
     }
@@ -170,7 +167,7 @@ function FormData(){
 
                     <div className="modal fade" id="previewCard" tabIndex="-1" role="dialog">
                         <div className="modal-dialog" role="document">
-                            <ModalCards data={data} fullname={fullname} dateOfBirth={dateOfBirth} company={company} phonenum={phonenum} role={role} profilepic={profilepic} file={file} />
+                            <ModalCards data={data} fullname={fullname} dateOfBirth={dateOfBirth} company={company} phonenum={phonenum} role={role} file={file} />
                         </div>
                     </div>
                     
